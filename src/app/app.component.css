@@ -1,0 +1,51 @@
+.spacer {
+    flex: 1 1 auto;
+  }
+  
+  a.active {
+    font-weight: bold;
+  }
+
+  .main-container {
+    display: flex;
+    justify-content: space-between; /* Asegura que los botones estén a la derecha */
+    align-items: flex-start; /* Alinea el contenido al inicio, en la parte superior */
+    padding: 16px;
+  }
+  
+  .content-container {
+    flex: 1; /* El contenido ocupa el máximo espacio posible */
+    margin-right: 20px; /* Margen para separar la lista de los botones */
+  }
+  
+  .button-container {
+    flex-direction: column; /* Los botones se apilan verticalmente */
+    display: flex;
+    justify-content: center; 
+    align-items: center;   
+    height: 85vh;   
+  }
+  
+  button {
+    width: 250px; /* Ancho más grande */
+    height: 250px; /* Altura igual al ancho para mantener la forma cuadrada */
+    margin: 20px; /* Margen alrededor de los botones */
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 18px; /* Ajusta el tamaño del texto para que se vea proporcionado */
+    color: white; /* Color del texto */
+    border: none; /* Sin bordes */
+    border-radius: 10px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor cuando pasas sobre el botón */
+  }
+  
+  #irListaButton {
+    background-color: #3f51b5; /* Azul del botón "Ir a la Lista" */
+  }
+  
+  #crearMiembroButton {
+    background-color: #ff4081; /* Rosado del botón "Crear Miembro" */
+  }
+  
+  

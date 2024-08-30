@@ -1,0 +1,24 @@
+.container {
+
+  align-items: center; /* Alineación vertical centrada */
+  margin-bottom: 20px; /* Añadir margen para separar el título de la lista */
+}
+
+h2 {
+  font-size: 2em; /* Tamaño del título */
+  font-weight: bold;
+  margin: 0; /* Quitar margen por defecto */
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.miembros-container {
+  height: 750px; /* Establece una altura fija */
+  overflow-y: auto; /* Habilita la barra de desplazamiento vertical */
+  overflow-x: hidden; /* Opcional: Esconde la barra de desplazamiento horizontal si no es necesaria */
+  border: 1px solid #ccc; /* Agrega un borde para que se vea más claro */
+  padding: 10px;
+}
+
+
+  
