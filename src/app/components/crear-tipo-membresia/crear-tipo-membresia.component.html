@@ -1,0 +1,22 @@
+<div class="container">
+    <h2>Crear Tipo de Membresía</h2>
+    <form (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input matInput [(ngModel)]="tipoMembresia.nombre" name="nombre" required>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Precio</mat-label>
+        <input matInput type="number" [(ngModel)]="tipoMembresia.precio" name="precio" required>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Meses</mat-label>
+        <input matInput type="number" [(ngModel)]="tipoMembresia.mes" name="mes" required>
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" type="submit">Crear Tipo de Membresía</button>
+    </form>
+  </div>
+  

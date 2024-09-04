@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MiembroService } from '../../services/miembro.service';
+import { TipoMembresiaService } from '../../services/tipo-membresia.service'; // Importa el servicio
 import { Router } from '@angular/router';
 
 @Component({
@@ -16,17 +17,22 @@ export class CrearMiembroComponent implements OnInit {
     }
   };
   
-  tiposMembresia = [
-    { id: 1, nombre: '1 Mes - 100 Soles' },
-    { id: 2, nombre: '3 Meses - 250 Soles' },
-    { id: 4, nombre: '6 Meses - 420 Soles' }
-    // Agrega más tipos de membresía aquí
-  ];
+  tiposMembresia: any[] = []; // Inicializa como un arreglo vacío
 
-  constructor(private miembroService: MiembroService, private router: Router) { }
+  constructor(
+    private miembroService: MiembroService,
+    private tipoMembresiaService: TipoMembresiaService, // Inyecta el servicio
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
-    // Puedes cargar tipos de membresía desde el backend si es necesario
+    this.cargarTiposMembresia();
+  }
+
+  cargarTiposMembresia(): void {
+    this.tipoMembresiaService.getTiposMembresia().subscribe((data) => {
+      this.tiposMembresia = data; // Carga los tipos de membresía desde la API
+    });
   }
 
   onSubmit(): void {
@@ -37,4 +43,5 @@ export class CrearMiembroComponent implements OnInit {
     });
   }
 }
+
 

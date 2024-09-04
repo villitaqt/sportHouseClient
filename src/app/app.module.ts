@@ -21,6 +21,8 @@ import { MatOptionModule } from '@angular/material/core';
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDialogModule } from '@angular/material/dialog';
+import { CrearTipoMembresiaComponent } from './components/crear-tipo-membresia/crear-tipo-membresia.component';
+import { ListarTiposMembresiaComponent } from './components/listar-tipos-membresia/listar-tipos-membresia.component';
 
 
 
@@ -30,7 +32,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     ListarMiembrosComponent,
     CrearMiembroComponent,
     EditarMiembroComponent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    CrearTipoMembresiaComponent,
+    ListarTiposMembresiaComponent
   ],
   imports: [
     BrowserModule,

@@ -1,23 +1,23 @@
 <form (ngSubmit)="onSubmit()">
-    <mat-form-field appearance="fill">
-      <mat-label>Nombre</mat-label>
-      <input matInput [(ngModel)]="miembro.nombre" name="nombre" required>
-    </mat-form-field>
-  
-    <mat-form-field appearance="fill">
-      <mat-label>DNI</mat-label>
-      <input matInput type="text" [(ngModel)]="miembro.dni" name="dni" required>
-    </mat-form-field>
-  
-    <mat-form-field appearance="fill">
-      <mat-label>Tipo de Membresía</mat-label>
-      <mat-select [(ngModel)]="miembro.membresia.tipoMembresia.id" name="membresia" required>
-        <mat-option *ngFor="let tipo of tiposMembresia" [value]="tipo.id">
-          {{ tipo.nombre }}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-  
-    <button mat-raised-button color="primary" type="submit">Guardar Cambios</button>
-  </form>
-  
+  <mat-form-field appearance="fill">
+    <mat-label>Nombre</mat-label>
+    <input matInput [(ngModel)]="miembro.nombre" name="nombre" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>DNI</mat-label>
+    <input matInput type="text" [(ngModel)]="miembro.dni" name="dni" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Tipo de Membresía</mat-label>
+    <mat-select [(ngModel)]="miembro.membresia.tipoMembresia.id" name="tipoMembresiaId" required>
+      <mat-option *ngFor="let tipo of tiposMembresia" [value]="tipo.id">
+        {{ tipo.nombre }} - {{ tipo.precio }} Soles
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">Guardar Cambios</button>
+</form>
+

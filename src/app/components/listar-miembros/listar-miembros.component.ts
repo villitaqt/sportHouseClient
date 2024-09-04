@@ -14,7 +14,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class ListarMiembrosComponent implements OnInit {
   miembros: MatTableDataSource<any> = new MatTableDataSource();
-  displayedColumns: string[] = ['nombre', 'dni', 'tipoMembresia', 'acciones'];
+  displayedColumns: string[] = ['nombre', 'dni', 'tipoMembresia', 'fechaFin', 'acciones'];
+
 
   constructor(private miembroService: MiembroService, private router: Router,
     private dialog: MatDialog,
@@ -58,6 +59,7 @@ export class ListarMiembrosComponent implements OnInit {
       this.loadMiembros();
     });
   }
+  
 }
 
 

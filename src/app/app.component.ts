@@ -18,5 +18,9 @@ export class AppComponent {
   navigateToCreate(): void {
     this.router.navigate(['/crear']);
   }
+
+  navigateToTipoLista(): void {
+    this.router.navigate(['/crear-tipo-membresia']);
+  }
 }
 

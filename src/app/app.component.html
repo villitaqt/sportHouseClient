@@ -1,10 +1,9 @@
 <mat-toolbar color="primary">
   <span>{{ title }}</span>
   <span class="spacer"></span>
- <!-- <a mat-button routerLink="/" routerLinkActive="active">Lista de Miembros</a>
-  <a mat-button routerLink="/crear" routerLinkActive="active">Crear Miembro</a>
-  <a mat-button routerLink="editar/:id" routerLinkActive="active">Crear Miembro</a>
-  -->
+  <a mat-button routerLink="/" routerLinkActive="active">Lista de Miembros</a>
+  <a mat-button routerLink="/listar-tipos-membresia" routerLinkActive="active">Membresias</a>
+  
 </mat-toolbar>
 
 <div class="main-container">
@@ -15,6 +14,7 @@
   <div class="button-container">
     <button  id="irListaButton" routerLink="/">Ir a la Lista</button>
     <button  id="crearMiembroButton" routerLink="/crear">Crear Miembro</button>
+    <button  id="crearMiembroButton" routerLink="/crear-tipo-membresia">Crear membresia</button>
   </div>
 </div>
 
